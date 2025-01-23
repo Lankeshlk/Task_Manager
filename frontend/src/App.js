@@ -294,6 +294,19 @@ const App = () => {
                 onChange={handleChange}
                 className="w-full p-2 border rounded mb-2"
               />
+              <label className="flex items-center space-x-2 mb-2">
+                <input
+                  type="checkbox"
+                  name="status"
+                  checked={updatedTask.status === "completed"}
+                  onChange={handleChange}
+                  className="form-checkbox h-5 w-5 text-blue-600"
+                />
+                <span className="text-gray-700">
+                  Status:{" "}
+                  {updatedTask.status === "completed" ? "Completed" : "Pending"}
+                </span>
+              </label>
               <input
                 type="date"
                 name="date"
